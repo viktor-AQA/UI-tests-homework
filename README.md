@@ -31,3 +31,4 @@
 ```shell
    playwright install
 ```
+Запустить тесты
