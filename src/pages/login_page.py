@@ -8,9 +8,9 @@ class LoginPage(BasePage):
 
     USERNAME_SELECTOR = '#user-name'
     PASSWORD_SELECTOR = '#password'
-    LOGIN_BUTTON_SELECTOR = '#login_button'
+    LOGIN_BUTTON_SELECTOR = '#login-button'
 
-    def login(self, username, password):
+    def login(self, username: str, password: str):
         self.navigate_to()
         self.wait_for_selector_and_fill(self.USERNAME_SELECTOR, username)
         self.wait_for_selector_and_fill(self.PASSWORD_SELECTOR, password)

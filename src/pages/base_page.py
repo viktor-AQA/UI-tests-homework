@@ -2,7 +2,7 @@ from playwright.sync_api import expect
 
 
 class BasePage():
-    __BASE_URL = 'https://www.saucedemo.com/'
+    __BASE_URL = 'https://www.saucedemo.com'
 
     def __init__(self, page):
         self.page = page
@@ -12,7 +12,7 @@ class BasePage():
         return f"{self.__BASE_URL}/{self._endpoint}"
     
     def navigate_to(self):
-            full_url = self._get_full_url
+            full_url = self._get_full_url()
             self.page.goto(full_url)
             self.page.wait_for_load_state('load')
             expect(self.page).to_have_url(full_url)

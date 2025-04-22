@@ -2,8 +2,8 @@ from src.pages.base_page import BasePage
 
 
 class InventoryPage(BasePage):
-    ADD_TO_CARD_SELECTOR = '[.inventory_item_description:has-text("Sauce Labs Backpack" button:has-text("Add to cart")]'
-    SHOPPING_CARD_SELECTOR = '[data-test="add-to-cart-sauce-labs-backpack"]'
+    ADD_TO_CARD_SELECTOR = ".inventory_item >> text='Add to cart'"
+    SHOPPING_CARD_SELECTOR = '[data-test="shopping-cart-link"]'
 
     def __init__(self, page):
         super().__init__(page)
