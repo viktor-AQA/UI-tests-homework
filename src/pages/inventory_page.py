@@ -13,6 +13,3 @@ class InventoryPage(BasePage):
         self.wait_for_selector_and_click(self.ADD_TO_CARD_SELECTOR)
         self.assert_element_is_visible(self.SHOPPING_CARD_SELECTOR)
         self.wait_for_selector_and_click(self.SHOPPING_CARD_SELECTOR)
-
-
-
